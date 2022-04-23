@@ -11,6 +11,7 @@ html {
 }
 
 body {
+  color: #ddd;
   padding: 0;
   margin: 0;
   min-height: 100vh;
@@ -20,15 +21,15 @@ body {
 }
 
 .header {
-  background-color: blue;
+  background-color: #fff;
   grid-column: 2 / -1;
   height: 100px;
 }
 
 /* Sidebar */
 .sidebar {
-  padding: 12px 20px;
-  background-color: red;
+  background-color: #8b5cf6;
+  padding: 12px 40px 12px 24px;
   grid-column: 1 / 2;
   grid-row: 1 / -1;
 
@@ -63,11 +64,14 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-auto-rows: max-content;
+  gap: 12px;
 }
 
 /* Main */
 .main-content {
-  background-color: black;
+  background-color: #ede9fe;
   grid-column: 2 / -1;
   grid-row: 2 / -1;
 }
