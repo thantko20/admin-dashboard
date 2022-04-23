@@ -3,7 +3,7 @@
 :root {
   --color: #ddd;
   --main-color: #0891b2;
-  --pale-main: #cffafe
+  --pale-main: #cffafe;
 }
 
 * {
@@ -16,11 +16,6 @@ html {
   font-weight: 500;
 }
 
-img {
-  height: 1.7rem;
-  width: 1.7rem;
-}
-
 body {
   color: var(--color);
   padding: 0;
@@ -31,16 +26,112 @@ body {
   grid-template-rows: auto 1fr;
 }
 
+/* Header */
 .header {
+  color: #000;
+  font-weight: bold;
   background-color: #fff;
+  padding: 20px 36px;
   grid-column: 2 / -1;
-  height: 100px;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: min(1fr, 900px) auto;
+  gap: 28px 18px;
+  box-shadow: 0px 4px 8px 8px rgba(0, 0, 0, 0.044);
+  z-index: 2;
+}
+
+.search {
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-info {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 30px;
+  justify-content: end;
+  align-items: center;
+}
+
+.user-info .name:hover{
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.profile-photo {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.greeting-tab {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  gap: 24px;
+}
+
+.greeting-tab img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+}
+
+.greeting-text * {
+  padding: 0;
+  margin: 0;
+}
+
+.greeting-text h1 {
+  font-weight: bolder;
+}
+
+.action-btns {
+  align-self: center;
+
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  justify-content: start;
+  gap: 24px;
+}
+
+.action-btns button {
+  border: 3px solid var(--main-color);
+  font-size: inherit;
+  font-weight: inherit;
+  background-color: transparent;
+  color: var(--main-color);
+  padding: 12px 0px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.action-btns button:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.search input {
+  font-size: 1.4rem;
+  color: rgb(129, 129, 129);
+  outline: none;
+  border: none;
+  background-color: rgb(236, 236, 236);
+  border-radius: 40px;
+  padding: 6px 16px;
+  width: 100%;
 }
 
 /* Sidebar */
 .sidebar {
   background-color: var(--main-color);
-  padding: 12px 40px 12px 28px;
+  padding: 18px 40px 18px 28px;
   grid-column: 1 / 2;
   grid-row: 1 / -1;
 
@@ -48,11 +139,14 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   gap: 40px;
+  z-index: 3;
 }
 
 .brand {
   display: grid;
-  grid-template-columns: repeat(2, max-content);
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  align-items: center;
   gap: 10px;
 }
 
@@ -66,6 +160,11 @@ body {
 .brand img {
   width: 3rem;
   height: 3rem;
+}
+
+.icon {
+  width: 1.7rem;
+  height: 1.7rem;
 }
 
 nav {
@@ -104,7 +203,7 @@ a {
 }
 
 ul li:hover {
-  background-color: #0a9cc1;
+  background-color: #08a3c9;
 }
 
 /* Main */
