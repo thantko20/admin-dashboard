@@ -257,7 +257,7 @@ nav li:hover {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: 1fr;
   gap: 30px;
 }
@@ -327,4 +327,8 @@ nav li:hover {
 
 .trending p {
   font-size: .8rem;
+}
+
+.shadow-box {
+  box-shadow: 3px 3px 4px 2px rgba(0, 0, 0, 0.08);
 }
